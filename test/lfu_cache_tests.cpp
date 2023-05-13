@@ -4,7 +4,7 @@
 
 template <typename Key, typename Value>
 using lfu_cache_t =
-    typename caches::fixed_sized_cache<Key, Value, caches::LFUCachePolicy>;
+    typename caches::fixed_sized_cache<Key, Value, caches::HashMap, caches::LFUCachePolicy>;
 
 TEST(LFUCache, Simple_Test)
 {

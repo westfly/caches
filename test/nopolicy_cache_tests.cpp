@@ -4,7 +4,7 @@
 #include <stdexcept>
 
 template <typename K, typename V>
-using no_policy_cache_t = typename caches::fixed_sized_cache<K, V, caches::NoCachePolicy>;
+using no_policy_cache_t = typename caches::fixed_sized_cache<K, V, caches::HashMap, caches::NoCachePolicy>;
 
 TEST(NoPolicyCache, Add_one_element)
 {
